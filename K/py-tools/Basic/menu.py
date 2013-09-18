@@ -2,14 +2,14 @@
 # This is the menu!!!
 print '...welcome...'
 print 
-print '1. Enter module names'
-print '2. Enter marks for your modules'
-print '3. Find the mean of your marks'
-print '4. Find the median of your marks'
+print '1. Chapter 1'
+print '2. Chapter 2'
+print '3. Chapter 3'
+print '4. Chapter 4'
 print '5. Quit '
 print
 
-a = raw_input ('Please press return on your keyboard to continue: ')
+a = raw_input ('Choose a number from the menu and please press return on your keyboard to continue: ')
 
 def my_menu(a):
         
@@ -17,9 +17,7 @@ def my_menu(a):
     a=input ('please enter the figure that represents what you want to do: ')
     print
     if a == 1:
-        print 'You have choosen to enter your module names'
-        print
-        print raw_input('Please enter your module name: ')
+        #chap1 funciton here 
         a1 = raw_input('Do you want to enter another module, y or n: ')
         print
         while a1 == 'y':
