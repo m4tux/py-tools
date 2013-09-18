@@ -10,8 +10,9 @@ if __name__ == "__main__":
     main()
 #                                        --- Variables ---    
 # Declaring variables and using Them ,Declare a variable and initialize it
-def Tvar(): 
-    print "***********************   Chapter 2 : Variables !   ***************************"
+def Tvar():
+    print "***********************   Chapter 2 : STRINGS !   ***************************"
+
     output = 0;
     print output
     # re-declaring the variable works
@@ -20,8 +21,94 @@ def Tvar():
     # ERROR: different types cannot be combined
     #print "string type " + 123 
     #so we use str function to convert it to a strings variable
-    print "string type " + str(123)
+    print "string type " #+ str(123)
     # Global vs. local variables in functions
+    
+    #string methods
+    # get some code from here  ! http://www.tutorialspoint.com/python/python_strings.htm -> browse methods below xD 
+    #http://docs.python.org/2/library/string.html
+    #
+    
+   
+    
+    #Accessing Values in Strings: 
+    
+    var1 = 'Hello World!'
+    var2 = "Python Programming"
+    
+    print "var1[0]: ", var1[0]
+    print "var2[1:5]: ", var2[1:5]
+    
+    #Updating Strings:
+    
+    var1 = 'Hello World!'
+    print var1
+    print "Updated String :- ", var1[:6] + 'Python'
+    
+    
+    #String Formatting Operator:
+    
+    
+    print "My name is %s and weight is %d kg!" % ('Zara', 21) 
+    
+    
+    #Python String capitalize() Method
+    str = "this is string example....wow!!!";
+    print str
+    print "str.capitalize() : ", str.capitalize()
+    #Python String center() Method
+    str = "this is string example....wow!!!";
+    print "str.center(40, 'a') : ", str.center(40, 'a')
+    #Python String count() Method
+    str = "this is string example....wow!!!";
+    sub = "i";
+    print "str.count(sub, 4, 40) : ", str.count(sub, 4, 40)
+    sub = "wow";
+    print "str.count(sub) : ", str.count(sub)
+    #Python String isalnum() Method
+    print r"This method returns true if all characters in the string are alphanumeric and there is at least one character, false otherwise."
+    str = "this2009";  # No space in this string
+    print str.isalnum();
+    str = "this is string example....wow!!!";
+    print str.isalnum();
+    #Python String isAlpha() method 
+    print r"This method returns true if all characters in the string are alphabetic and there is at least one character, false otherwise."
+    str = "this";  # No space & digit in this string
+    print str.isalpha();
+    str = "this is string example....wow!!!";
+    print str.isalpha();
+    #Python String join() Method
+    print r"The method join() returns a string in which the string elements of sequence have been joined by str separator."
+    str = "-";
+    seq = ("a", "b", "c"); # This is sequence of strings.
+    print str.join( seq );
+    #Python String len() Method
+    print r"The method len() returns the length of the string."
+    str = "this is string example....wow!!!";
+    print "Length of the string: ", len(str);
+    #Python String lstrip() Method
+    print r"The method lstrip() returns a copy of the string in which all chars have been stripped from the beginning of the string (default whitespace characters)."
+    str = "     this is string example....wow!!!     ";
+    print str.lstrip();
+    str = "88888888this is string example....wow!!!8888888";
+    print str.lstrip('8');
+    
+    
+    
+    #str.find(str, beg=0 end=len(string))
+    print r"str.find"
+    str1 = "this is string example....wow!!!";
+    str2 = "exam";
+    
+    print str1.find(str2);
+    print str1.find(str2, 10);
+    print str1.find(str2, 40);
+    
+    # Split function
+    a = "ok test aka you motherfucker!"
+    print a.split()
+    
+    # you can find other strings methods in http://www.tutorialspoint.com/python/python_strings.htm
     def someFunction():
       #global output
       output = "def"
@@ -32,6 +119,175 @@ def Tvar():
     del output 
     output = 'ok'
     print output
+    
+    print "***********************   Chapter 2 : LIST !   ***************************"
+    #http://docs.python.org/2/tutorial/datastructures.html
+    #get some code from here : http://www.tutorialspoint.com/python/python_lists.htm
+    
+    #Accessing Values in Lists:
+    
+    list1 = ['physics', 'chemistry', 1997, 2000];
+    list2 = [1, 2, 3, 4, 5, 6, 7 ];
+    print "list1[0]: ", list1[0]
+    print "list2[1:5]: ", list2[1:5]
+    
+    
+    #Updating Lists:
+    list = ['physics', 'chemistry', 1997, 2000];
+    print "Value available at index 2 : "
+    print list[2];
+    list[2] = 2001;
+    print "New value available at index 2 : "
+    print list[2];
+    
+    #Delete List Elements:
+    list1 = ['physics', 'chemistry', 1997, 2000];
+    
+    print list1;
+    del list1[2];
+    print "After deleting value at index 2 : "
+    print list1;
+    
+    #Python includes the following list functions:
+    
+    #Python List cmp() Method
+    print r"The method cmp() compares elements of two lists."
+    
+    list1, list2 = [123, 'xyz'], [456, 'abc']
+
+    print cmp(list1, list2);
+    print cmp(list2, list1);
+    list3 = list2 + [786];
+    print cmp(list2, list3)
+        
+    
+    #Python List len() Method
+    print r"The method len() returns the number of elements in the list."
+    list1, list2 = [123, 'xyz', 'zara'], [456, 'abc']
+    
+    print "First list length : ", len(list1);
+    print "Second list length : ", len(list2);
+
+    #Python List max() Method
+    print r"The method max returns the elements from the list with maximum value."
+    
+    list1, list2 = [123, 'xyz', 'zara', 'abc'], [456, 700, 200]
+    
+    print "Max value element : ", max(list1);
+    print "Max value element : ", max(list2);
+    
+    #Python List min() Method
+    print r"The method min() returns the elements from the list with minimum value."
+    
+    list1, list2 = [123, 'xyz', 'zara', 'abc'], [456, 700, 200]
+
+    print "min value element : ", min(list1);
+    print "min value element : ", min(list2);
+    
+    
+    #Python List list() Method
+    print r"The method list() takes sequence types and converts them to lists. This is used to convert a given tuple into list."
+    
+    aTuple = (123, 'xyz', 'zara', 'abc');
+    #aList = list(aTuple)
+    
+    print "List elements : ", aTuple   #aList
+    
+    
+    
+    #Python includes following list methods
+    
+    
+    #Python List append() Method
+    print r"The method append() appends a passed obj into the existing list."
+    
+    
+    aList = [123, 'xyz', 'zara', 'abc'];
+    aList.append( 2009 );
+    print "Updated List : ", aList;
+    
+    
+    #Python List count() Method
+    print r"The method count() returns count of how many times obj occurs in list."
+    
+    
+    aList = [123, 'xyz', 'zara', 'abc', 123];
+    
+    print "Count for 123 : ", aList.count(123);
+    print "Count for zara : ", aList.count('zara');
+        
+    #Python List extend() Method
+    print r"The method extend() appends the contents of seq to list."
+    
+    
+    
+    aList = [123, 'xyz', 'zara', 'abc', 123];
+    bList = [2009, 'manni'];
+    aList.extend(bList)
+    
+    print "Extended List : ", aList ;
+    
+    
+    
+    #Python List index() Method
+    print r"The method index() returns the lowest index in list that obj appears."
+    
+    aList = [123, 'xyz', 'zara', 'abc'];
+    
+    print "Index for xyz : ", aList.index( 'xyz' ) ;
+    print "Index for zara : ", aList.index( 'zara' ) ;
+    
+    
+    
+    
+    
+    #Python List insert() Method
+    print r"The method insert() inserts object obj into list at offset index."
+    aList = [123, 'xyz', 'zara', 'abc']
+    aList.insert( 3, 2009)
+    print "Final List : ", aList
+    
+    
+    
+    #stack operations 
+    #Python List pop() Method
+    
+    print r"The method pop() removes and returns last object or obj from the list."
+    
+    aList = [123, 'xyz', 'zara', 'abc'];
+
+    print "A List : ", aList.pop();
+    print "B List : ", aList.pop(2);
+    
+    
+    #Python List remove() Method
+    print r"The method remove() removes first obj from the list."    
+    
+    aList = [123, 'xyz', 'zara', 'abc', 'xyz'];
+
+    aList.remove('xyz');
+    print "List : ", aList;
+    aList.remove('abc');
+    print "List : ", aList;
+    
+    
+    #Python List reverse() Method
+    print r"The method reverse() reverses objects of list in place."
+    
+    aList = [123, 'xyz', 'zara', 'abc', 'xyz'];
+    aList.reverse();
+    print "List : ", aList;
+    
+    #Python List sort() Method
+    #for review to get a look about the func parameter
+    print r"The method sort() sorts objects of list, use compare func if given."
+    
+    aList = [123, 'xyz', 'zara', 'abc', 'xyz'];
+
+    aList.sort();
+    print "List : ", aList;
+    
+    
 # ---Functions---
 def Tfunction():
     print "***********************   Chapter 2 : Functions !   ***************************"
@@ -321,7 +577,7 @@ print '4. Chapter 4'
 print '5. Quit '
 print
 
-def my_menu(a):
+def my_menu():
     a=input ('please enter the chapter number that you want to learn: ')
     if a == 1:
         Tvar()
@@ -341,12 +597,12 @@ def my_menu(a):
         print 'That is not part of the menu!!!'
     x = raw_input ('Another task from the menu? y or n: ')
     if x == 'y':
-        my_menu(a)
+        my_menu()
     else: 
         print '......GOODBYE......'
         return
 
-my_menu(a)
+my_menu()
 
 # TDates()   str used before & must be replaced o0 ? wtf
 # end here 
